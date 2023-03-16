@@ -93,11 +93,75 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\033[显示格式;字体颜色;背景色m输出]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="显示方式"><a href="#显示方式" class="headerlink" title="显示方式"></a>显示方式</h4><table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认</td>
+<td>亮色</td>
+<td>暗色</td>
+<td>斜体</td>
+<td>下划线</td>
+<td>闪烁</td>
+<td>跟随</td>
+<td>反显</td>
+<td>透明</td>
+<td>中划线</td>
+</tr>
+</tbody></table>
+<h4 id="前景色（字体）"><a href="#前景色（字体）" class="headerlink" title="前景色（字体）"></a>前景色（字体）</h4><p>|   30   |   31   |   32  |   33   |   34   |   35   |   36   |   37   |<br>| —– | —– | —- | —– | —– | —– | —– | —– | —– |<br>|   黑色| 红色  |  绿色 | 黄色  | 蓝色 | 洋红  | 青色  |  白色 |</p>
+<h4 id="背景色"><a href="#背景色" class="headerlink" title="背景色"></a>背景色</h4><table>
+<thead>
+<tr>
+<th>40</th>
+<th>41</th>
+<th>42</th>
+<th>43</th>
+<th>44</th>
+<th>45</th>
+<th>46</th>
+<th>47</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>黑色</td>
+<td>红色</td>
+<td>绿色</td>
+<td>黄色</td>
+<td>蓝色</td>
+<td>洋红</td>
+<td>青色</td>
+<td>白色</td>
+</tr>
+</tbody></table>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li><p>控制码的输入没有顺序，没有数量限制，但是三种控制码同时间内只能生效最靠右的一个，三种控制码的排序互相之间没有影响。  </p>
+</li>
+<li><p>控制码为对整个命令行的渲染，不被覆盖的话会一直存在（关掉终端再打开除外）。记得重置，即为用“0”这一标记值覆盖。</p>
+</li>
+</ul>
+<p><em><strong>例子</strong></em><br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;\033[5;37;33;34;34;1;9;20mhelloworld\033[0m&quot;</span></span><br><span class="line"><span class="comment">#最后的\033[0m即为重置</span></span><br></pre></td></tr></table></figure><br>  以下为结果<br>  （图  </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/16/Linux1/" data-id="clfazznyz0000iowafigmgoul" data-title="Linux1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/16/Linux1/" data-id="clfb09pxt0000q8waeyixdpqy" data-title="Linux1" class="article-share-link">Share</a>
       
       
       
@@ -135,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/16/err1/" data-id="clfazznzl0002iowa2avhdh56" data-title="err1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/16/err1/" data-id="clfb09pyi0001q8waaxn91p25" data-title="err1" class="article-share-link">Share</a>
       
       
       
@@ -186,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/16/hello-world/" data-id="clfazznz90001iowa3pjfeww2" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/03/16/hello-world/" data-id="clfb09pzj0002q8wabwty5ay3" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
